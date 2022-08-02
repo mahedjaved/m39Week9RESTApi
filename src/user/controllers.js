@@ -161,3 +161,16 @@ exports.deleteUser = async (req, res) => {
         res.send({ err: error });
     }
 };
+
+// Week 9 day 2 -- Login request
+// Refer to this later
+// exports.login = async (req, res) => {
+//     try {
+//         const user = await User.findOne({
+//             username: req.body.username,
+//             password: req.body.password,
+//         });
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
