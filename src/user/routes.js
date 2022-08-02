@@ -5,10 +5,18 @@ const { Router } = require("express");
 const userRouter = Router();
 
 // pull in the create user controller
-const { createUser } = require("./controllers");
+const {
+    createUser,
+    readUser,
+    updateUser,
+    deleteUser,
+} = require("./controllers");
 
 // now we set our HTTP verbs, we are using 'C' equivalent which is 'P'
 // you dont need to use createUser() because userRouter.post is running it, the /user is the ENDPOINT
 userRouter.post("/user", createUser);
+userRouter.get("/user", readUser);
+userRouter.patch("/user", updateUser);
+userRouter.delete("/user", deleteUser);
 
 module.exports = userRouter;
